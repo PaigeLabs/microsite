@@ -1,6 +1,9 @@
 $icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/";
 
 @import 'bootstrap-sass-official/vendor/assets/stylesheets/bootstrap';
+@import 'compass/css3';
+
+$paige-green: #8ab643;
 
 .browsehappy {
     margin: 0.2em 0;
@@ -13,6 +16,25 @@ $icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/
 body {
     padding-top: 20px;
     padding-bottom: 20px;
+}
+
+
+
+#page {
+  max-width: 960px;
+  margin: auto;
+}
+
+.logo{
+  display: inline-block;
+  width: 94px;
+  height: 35px;
+  margin-right: 2px;
+  background-image: url(../images/paige-logo.png);
+}
+
+.accent{
+  color: $paige-green;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -37,25 +59,15 @@ body {
 }
 
 /* Custom page footer */
-.footer {
+footer {
     padding-top: 19px;
     color: #777;
     border-top: 1px solid #e5e5e5;
+  font-size: 0.95rem;
 }
 
 .container-narrow > hr {
     margin: 30px 0;
-}
-
-/* Main marketing message and sign up button */
-.jumbotron {
-    text-align: center;
-    border-bottom: 1px solid #e5e5e5;
-}
-
-.jumbotron .btn {
-    font-size: 21px;
-    padding: 14px 24px;
 }
 
 /* Supporting marketing content */
@@ -67,10 +79,64 @@ body {
     margin-top: 28px;
 }
 
+/* BootStrap overrides */
+.nav{
+  li{
+    display: inline-block;
+    font-size: 1.1em;
+    margin: .5rem;
+    a{
+      color: #000;
+      &:hover{
+        background-color: transparent;
+        color: $paige-green;
+      }
+    }
+  }
+  li.active{
+    a{
+      color: $paige-green;
+      border-bottom: solid 1px $paige-green;
+    }
+  }
+}
+
+/* Welcome::Main Page */
+.quick-link {
+  width: 33%;
+  display: inline-block;
+  text-align: center;
+  padding-top: 125px;
+  padding-bottom: 10px;
+  vertical-align: text-bottom;
+  background-color: #555;
+  color: $paige-green;
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-decoration: none;
+  border: solid 1px #EEE;
+  @include border-radius(8px);
+  &.education {
+    background: #555 url(../images/education.png) no-repeat center;
+  }
+  &.open-source{
+    background: #555 url(../images/osi.png) no-repeat center;
+  }
+  &.community{
+    background: #555 url(../images/community.png) no-repeat center;
+  }
+  &:hover{
+    text-decoration: none;
+    background-color: #666;
+    color: #EEE;
+  }
+}
+
+
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
     .container {
-        max-width: 730px;
+        max-width: 960px;
     }
 
     /* Remove the padding we set earlier */

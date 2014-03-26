@@ -25,6 +25,22 @@ angular.module('paigeLabsApp', [
         controller: 'SettingsCtrl',
         authenticate: true
       })
+      .when('/education', {
+        templateUrl: 'partials/education',
+        controller: 'EducationCtrl'
+      })
+      .when('/opensource', {
+        templateUrl: 'partials/opensource',
+        controller: 'OpensourceCtrl'
+      })
+      .when('/community', {
+        templateUrl: 'partials/community',
+        controller: 'CommunityCtrl'
+      })
+      .when('/register', {
+        templateUrl: 'partials/register',
+        controller: 'RegisterCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });

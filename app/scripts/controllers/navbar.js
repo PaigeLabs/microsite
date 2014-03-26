@@ -5,9 +5,15 @@ angular.module('paigeLabsApp')
     $scope.menu = [{
       'title': 'Home',
       'link': '/'
-    }, {
-      'title': 'Settings',
-      'link': '/settings'
+    },{
+      'title': 'Education',
+      'link': '/education'
+    },{
+      'title': 'Open Source',
+      'link': '/opensource'
+    },{
+      'title': 'Community',
+      'link': '/community'
     }];
     
     $scope.logout = function() {

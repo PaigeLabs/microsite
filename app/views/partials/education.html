@@ -1,0 +1,15 @@
+
+<div class="jumbotron">
+    <h2>Education<br/>
+        <small>Paige Technologies offers educational classes on a number of different topics.</small></h2>
+</div>
+
+<div class="row marketing">
+    <div class="class" ng-repeat="class in classes">
+        <h4 ng-bind="class.name"></h4>
+        <span ng-bind-html="class.longDescription"></span>
+    </div>
+
+    <a href="#/register" class="btn btn-primary">Register</a>
+</div>
+

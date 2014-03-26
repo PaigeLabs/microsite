@@ -15,7 +15,7 @@ module.exports = function(config) {
     ],
 
     // list of files / patterns to exclude
-    exclude: [],
+    exclude: ['app/bower_components/angular-scenario/angular-scenario.js'],
 
     // web server port
     port: 8080,
