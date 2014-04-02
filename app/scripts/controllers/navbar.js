@@ -3,16 +3,16 @@
 angular.module('paigeLabsApp')
   .controller('NavbarCtrl', function ($scope, $location, Auth) {
     $scope.menu = [{
-      'title': 'Home',
+      'title': 'HOME',
       'link': '/'
     },{
-      'title': 'Education',
+      'title': 'EDUCATION',
       'link': '/education'
     },{
-      'title': 'Open Source',
+      'title': 'OPEN SOURCE',
       'link': '/opensource'
     },{
-      'title': 'Community',
+      'title': 'COMMUNITY',
       'link': '/community'
     }];
     

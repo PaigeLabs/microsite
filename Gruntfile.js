@@ -15,7 +15,7 @@ module.exports = function (grunt) {
   // Time how long tasks take. Can help when optimizing build times
   require('time-grunt')(grunt);
 
-  // Define the configuration for all the tasks
+  // Define the configuration for all the tasksgrunt
   grunt.initConfig({
 
     // Project settings
@@ -273,7 +273,10 @@ module.exports = function (grunt) {
           cwd: '<%= yeoman.app %>/images',
           src: '{,*/}*.{png,jpg,jpeg,gif}',
           dest: '<%= yeoman.dist %>/public/images'
-        }]
+        }],
+        options: {
+          cache: false
+        }
       }
     },
 

@@ -86,17 +86,28 @@ footer {
     font-size: 1.1em;
     margin: .5rem;
     a{
-      color: #000;
+      color: #999;
+      font-variant: small-caps;
       &:hover{
         background-color: transparent;
         color: $paige-green;
       }
+      &:active{
+        outline: none;
+      }
     }
   }
   li.active{
+    border: none;
     a{
       color: $paige-green;
+      background-color: transparent;
+      border: none;
       border-bottom: solid 1px $paige-green;
+
+      &:focus{
+        outline: none;
+      }
     }
   }
 }
@@ -116,26 +127,37 @@ footer {
   padding-top: 125px;
   padding-bottom: 10px;
   vertical-align: text-bottom;
-  background-color: #555;
-  color: $paige-green;
+  color: #EEE;
   font-weight: bold;
   font-size: 1.5rem;
   text-decoration: none;
   border: solid 1px #EEE;
   @include border-radius(8px);
+  background-color: rgba(0,0,0,0.3);
+  background-position: center;
+  background-repeat: no-repeat;
   &.education {
-    background: #555 url(../images/education.png) no-repeat center;
+    background-image: url(../images/education.png);
+    &:hover{
+      background-image: url(../images/education_over.png);
+    }
   }
   &.open-source{
-    background: #555 url(../images/osi.png) no-repeat center;
+    background-image: url(../images/osi.png);
+    &:hover{
+      background-image: url(../images/osi_over.png);
+    }
   }
   &.community{
-    background: #555 url(../images/community.png) no-repeat center;
+    background-image: url(../images/community.png);
+    &:hover{
+      background-image: url(../images/community_over.png);
+    }
   }
   &:hover{
     text-decoration: none;
-    background-color: #666;
-    color: #EEE;
+    background-color: rgba(0,0,0,0.05);
+    color: $paige-green;
   }
 }
 
