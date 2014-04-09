@@ -5,9 +5,12 @@
 </div>
 
 <div class="row marketing">
+    <hr/>
     <div class="class" ng-repeat="class in classes">
         <h4 ng-bind="class.name"></h4>
-        <span ng-bind-html="class.longDescription"></span>
+        <div ng-bind="class.shortDescription"></div>
+        <div ng-bind-html="class.longDescription"></div>
+        <hr/>
     </div>
 
     <a href="#/register" class="btn btn-primary">Register</a>

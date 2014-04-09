@@ -1,32 +1,22 @@
 'use strict';
 
 angular.module('paigeLabsApp')
-  .controller('RegisterCtrl', function ($scope) {
+  .controller('RegisterCtrl', function ($scope, $location, Registration, StateService, ClassService) {
     $scope.user = {};
     $scope.errors = {};
+    $scope.states = StateService.States;
+    $scope.classes = ClassService.query();
 
     $scope.register = function(form) {
       $scope.submitted = true;
 
       if(form.$valid) {
-        Auth.createUser({
-          name: $scope.user.name,
-          email: $scope.user.email,
-          city: $scope.user.city,
-        })
-          .then( function() {
-            // Account created, redirect to home
+        Registration.save($scope.user,
+          function(){
+            toastr.success('Successfully signed up to be notified.');
             $location.path('/');
-          })
-          .catch( function(err) {
-            err = err.data;
-            $scope.errors = {};
-
-            // Update validity of form fields that match the mongoose errors
-            angular.forEach(err.errors, function(error, field) {
-              form[field].$setValidity('mongoose', false);
-              $scope.errors[field] = error.message;
-            });
+          }, function(err){
+            console.log(err);
           });
       }
     };

@@ -18,6 +18,27 @@ body {
     padding-bottom: 20px;
 }
 
+form[novalidate] input,
+form[novalidate] select{
+  border-left-width: 8px;
+  border-color: #3498db;
+  border-style: solid;
+}
+
+input[required].ng-pristine,
+select[required].ng-pristine{
+  border-color: #e74c3c;
+}
+
+input.ng-invalid.ng-dirty,
+select.ng-invalid.ng-dirty{
+  border-color: #e74c3c;
+}
+
+input.ng-valid.ng-dirty,
+select.ng-valid.ng-dirty{
+  border-color: $paige-green;
+}
 
 
 #page {
@@ -159,6 +180,11 @@ footer {
     background-color: rgba(0,0,0,0.05);
     color: $paige-green;
   }
+}
+
+.register-description,
+.narrow-form {
+  width: 48%;
 }
 
 
