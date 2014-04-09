@@ -1,0 +1,28 @@
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width: 768px){
+
+  .register-description.pull-left {
+    width: 100%;
+  }
+
+  .form.narrow-form.pull-right {
+    width: 100%;
+  }
+
+  .nav.pull-right{
+    width: 100%;
+    li{
+      display: block;
+    }
+  }
+}
+
+@media only screen and (max-width: 480px){
+  .quick-links{
+    a.quick-link{
+      display: block;
+      width: 80%;
+      margin: 1rem auto;
+    }
+  }
+}
