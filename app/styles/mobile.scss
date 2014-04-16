@@ -10,9 +10,30 @@
   }
 
   .nav.pull-right{
-    width: 100%;
     li{
-      display: block;
+      font-size: .8em;
+      border: solid 1px $paige-green;
+      @include border-radius(8px);
+      a{
+        padding: .75rem;
+      }
+      &.active{
+        background-color: $paige-green;
+        a{
+          color: #FFF;
+          border-bottom: none;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px){
+  .header{
+    border-bottom: none;
+    &> * {
+      width: 100%;
+      text-align: center;
     }
   }
 }

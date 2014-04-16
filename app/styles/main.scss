@@ -2,7 +2,6 @@ $icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/
 
 @import 'bootstrap-sass-official/vendor/assets/stylesheets/bootstrap';
 @import 'compass/css3';
-@import 'mobile';
 
 $paige-green: #8ab643;
 
@@ -69,17 +68,19 @@ footer {
 
 /* Custom page header */
 .header {
-    border-bottom: 1px solid #e5e5e5;
-}
-
-/* Make the masthead heading the same height as the navigation */
-.header h2 {
+  @include clearfix();
+  border-bottom: 1px solid #e5e5e5;
+  /* Make the masthead heading the same height as the navigation */
+  h2 {
     margin-top: 0;
     margin-bottom: 0;
     line-height: 40px;
     padding-bottom: 10px;
-  padding-left: 10px;
+    padding-left: 10px;
+  }
 }
+
+
 
 /* Custom page footer */
 footer {
@@ -136,6 +137,7 @@ footer {
 }
 
 .jumbotron{
+  clear: both;
   background-image: url(../images/Surge_burst.png);
   small {
     color: #FFF;
@@ -193,8 +195,13 @@ footer {
 }
 
 
-  /* Responsive: Portrait tablets and up */
-  @media screen and (min-width: 768px) {
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+
+    .nav {
+      display: block;
+    }
+
     .container {
         max-width: 960px;
     }
@@ -215,3 +222,5 @@ footer {
         border-bottom: 0;
     }
 }
+
+@import 'mobile';

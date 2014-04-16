@@ -1,11 +1,11 @@
 <div class="header" ng-controller="NavbarCtrl">
-  <ul class="nav pull-right">
+  <h2 class="text-muted pull-left"><span class="logo"></span><span class="accent">::</span>LABS</h2>
+  <ul class="nav pull-right" ng-show="!navCollapsed">
     <li ng-repeat="item in menu" ng-class="{active: isActive(item.link)}">
-        <a ng-href="{{item.link}}">{{item.title}}</a>
+        <a ng-href="{{item.link}}" ng-click="navCollapsed=true">{{item.title}}</a>
     </li>
     <!--<li ng-hide="currentUser" ng-class="{active: isActive('/login')}"><a href="/login">Login</a></li>-->
     <!--<li ng-hide="currentUser" ng-class="{active: isActive('/signup')}"><a href="/signup">Sign up</a></li>-->
     <!--<li ng-show="currentUser" ng-class="{active: isActive('/logout')}"><a href="" ng-click="logout()">Logout</a></li>-->
   </ul>
-  <h2 class="text-muted"><span class="logo"></span><span class="accent">::</span>LABS</h2>
 </div>

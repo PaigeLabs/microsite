@@ -2,6 +2,7 @@
 
 angular.module('paigeLabsApp')
   .controller('NavbarCtrl', function ($scope, $location, Auth) {
+    $scope.vis = true;
     $scope.menu = [{
       'title': 'HOME',
       'link': '/'
