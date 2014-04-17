@@ -15,11 +15,11 @@ $paige-green: #8ab643;
 
   .nav.pull-right{
     li{
-      font-size: .8em;
+      font-size: .6em;
       border: solid 1px $paige-green;
       @include border-radius(8px);
       a{
-        padding: .75rem;
+        padding: .5rem;
       }
       &.active{
         background-color: $paige-green;
